@@ -5,13 +5,13 @@ public class SimplePizzaFactory {
         Pizza pizza = null;
 
         if (type.equals("cheese")) {
-            pizza = new CheesePizza();
+            // pizza = new CheesePizza();
         } else if (type.equals("pepperoni")) {
-            pizza = new PepperoniPizza();
+            // pizza = new PepperoniPizza();
         } else if (type.equals("clam")) {
-            pizza = new ClamPizza();
+            // pizza = new ClamPizza();
         } else if (type.equals("veggie")) {
-            pizza = new VeggiePizza();
+            // pizza = new VeggiePizza();
         }
         return pizza;
     }
