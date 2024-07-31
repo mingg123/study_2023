@@ -4,16 +4,15 @@ import java.util.ArrayList;
 
 public abstract class Pizza {
     String name;
-    String dough;
-    String sauce;
-    List<String> toppings = new ArrayList<String>();
+    Dough dough;
+    Sauce sauce;
+    Veggies veggies[];
+    Cheese cheese;
+    Pepperoni pepperoni;
+    Clams clam;
 
-    public void prepare() {
-        System.out.println("준비 중 " + name);
-        for(String topping : toppings) {
-            System.out.println("토핑: " + topping);
-        }
-    }
+    // 피자를 만드는데 필요한 재료를 가져옴
+    abstract void prepare();
 
     public void bake() {
         System.out.println("bake");
@@ -27,7 +26,15 @@ public abstract class Pizza {
         System.out.println("box");
     }
 
-    public String getName() {
+    void setName(String name) {
+        this.name = name;
+    }
+
+    String getName() {
         return name;
+    }
+
+    public String toString() {
+        return getName();
     }
 }
